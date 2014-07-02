@@ -1,4 +1,6 @@
 <?php
+
+/*COMENTARIO: No se vale copiarse el codigo... (Ignora este comentario, estamos haciendo una prueba), pero si, hay que rehacerlo*/
 //Path to twitteroauth library
 require_once("oauth/twitteroauth.php"); 
 
