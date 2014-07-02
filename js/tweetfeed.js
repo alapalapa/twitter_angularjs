@@ -1,10 +1,11 @@
 (function(){
     var app = angular.module('request', []);
+    
 
     app.controller('TwitterController', ['$http', function($http){
-        this.tweets = {};
+        this.tweets = [];
 
-        this.getTweets = function(){
+        this.getTweets = function(twitterCtrl){
             console.log('I am inside');
 
             var request = $http({
@@ -17,8 +18,8 @@
             })            
             .success(function(data){
                 console.log('success');
-                this.tweets = data;
-                console.log(this.tweets);
+                twitterCtrl.tweets = data;
+                console.log(twitterCtrl.tweets);
                 /*
                 console.log(this.tweets[1].text);
                 console.log(this.tweets[1].created_at);

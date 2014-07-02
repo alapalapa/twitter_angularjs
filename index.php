@@ -1,3 +1,4 @@
+<!doctype html>
 <html ng-app="request">
 	<head>
 		<title>Requests</title>
@@ -23,10 +24,13 @@
 
 			<div ng-controller="TwitterController as twitter">
 				<div>
-					<button class="btn btn-default" ng-click="twitter.getTweets()">Get Tweets</button>
+					<button class="btn btn-default" ng-click="twitter.getTweets(twitter)">Get Tweets</button>
 				</div>
 				<div ng-repeat="data in twitter.tweets">
-					<h3>{{data.text}}</h3>
+					<h4 class="text-info">{{data.user.name}}</h4>
+					<p>{{data.text}}</p>
+					<p>{{data.created_at}}</p>
+					<p>{{data.source}}</p>
 				</div>
 			</div>
 		</div>
