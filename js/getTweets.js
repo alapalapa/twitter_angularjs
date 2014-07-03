@@ -10,8 +10,9 @@
 
             var request = $http({
                 method: "POST",
-                url:"getTweets.php",
-                headers: {'Authorization': 'xxx', 'Content-Type': 'application/json'},
+                url:"http://localhost/twitter/getTweets.php",
+                //withCredentials: true,
+                headers: {'Accept': 'application/json','Authorization': 'xxxx', 'Content-Type': 'application/json'},
                 data:{
                     'user':"user1234",
                     'pass':"pass1234"

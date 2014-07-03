@@ -1,4 +1,9 @@
 <?php
+//header("Accept: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+//header("Authorization: xxx");
+//header("Content-type: application/json");
 
 //require the twitteroauth (API Twitter)
 require_once("oauth/twitteroauth.php"); 
